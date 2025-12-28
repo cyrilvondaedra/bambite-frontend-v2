@@ -1,0 +1,35 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 100.729 109.532" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 176" filter="url(#filter0_nn_775_3074)">
+<path id="Union" d="M99.7285 39.1234H100.729V38.6258L100.332 38.3257L99.7285 39.1234ZM99.7285 70.4085L100.332 71.2062L100.729 70.9061V70.4085H99.7285ZM49.8418 108.131L49.0442 108.734L49.6474 109.532L50.4449 108.929L49.8418 108.131ZM42.4707 98.3851L41.8676 97.5875L41.0699 98.1907L41.6731 98.9883L42.4707 98.3851ZM87.5088 64.3285L88.1119 65.1261L88.5088 64.826V64.3285H87.5088ZM87.5088 60.4349H88.5088V59.4349H87.5088V60.4349ZM1 60.4349H0V61.4349H1V60.4349ZM1 48.2161V47.2161H0V48.2161H1ZM87.5088 48.2161V49.2161H88.5088V48.2161H87.5088ZM87.5088 45.2025H88.5088V44.7049L88.1119 44.4048L87.5088 45.2025ZM42.4707 11.1468L41.6731 10.5436L41.0698 11.3413L41.8676 11.9445L42.4707 11.1468ZM49.8418 1.40072L50.4449 0.603087L49.6474 2.25364e-08L49.0442 0.797503L49.8418 1.40072ZM99.7285 39.1234H98.7285V70.4085H99.7285H100.729V39.1234H99.7285ZM99.7285 70.4085L99.1254 69.6109L49.2387 107.334L49.8418 108.131L50.4449 108.929L100.332 71.2062L99.7285 70.4085ZM49.8418 108.131L50.6394 107.528L43.2683 97.7819L42.4707 98.3851L41.6731 98.9883L49.0442 108.734L49.8418 108.131ZM42.4707 98.3851L43.0739 99.1827L88.1119 65.1261L87.5088 64.3285L86.9056 63.5308L41.8676 97.5875L42.4707 98.3851ZM87.5088 64.3285H88.5088V60.4349H87.5088H86.5088V64.3285H87.5088ZM87.5088 60.4349V59.4349H1V60.4349V61.4349H87.5088V60.4349ZM1 60.4349H2V48.2161H1H0V60.4349H1ZM1 48.2161V49.2161H87.5088V48.2161V47.2161H1V48.2161ZM87.5088 48.2161H88.5088V45.2025H87.5088H86.5088V48.2161H87.5088ZM87.5088 45.2025L88.1119 44.4048L43.0738 10.3492L42.4707 11.1468L41.8676 11.9445L86.9057 46.0001L87.5088 45.2025ZM42.4707 11.1468L43.2683 11.75L50.6394 2.00394L49.8418 1.40072L49.0442 0.797503L41.6731 10.5436L42.4707 11.1468ZM49.8418 1.40072L49.2387 2.19835L99.1254 39.921L99.7285 39.1234L100.332 38.3257L50.4449 0.603087L49.8418 1.40072Z" fill="var(--stroke-0, white)"/>
+</g>
+<defs>
+<filter id="filter0_nn_775_3074" x="0" y="0" width="100.729" height="109.532" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.08403361588716507 0.08403361588716507" stitchTiles="stitch" numOctaves="3" result="noise" seed="5564" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="#BBA68A" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_775_3074">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+<feTurbulence type="fractalNoise" baseFrequency="0.16129033267498016 0.16129033267498016" stitchTiles="stitch" numOctaves="3" result="noise" seed="5564" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="effect1_noise_775_3074" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="#313649" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect2_noise_775_3074">
+<feMergeNode in="effect1_noise_775_3074" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+</defs>
+</svg>
