@@ -79,7 +79,7 @@ export default function MyHomeToYoursSection({
           </div>
 
           {/* Decorative image on left */}
-          <div className="absolute h-[33vh] sm:h-[35vh] lg:h-[476.508px] left-[32.6%] top-0 w-[20vw] max-w-[287.212px] hidden lg:block">
+          <div className="absolute h-[33vh] sm:h-[35vh] lg:h-[476.508px] left-[32.6%] -top-14 w-[20vw] max-w-[287.212px] hidden lg:block">
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
               <Image
                 src="/home-assets/window-frame-assets/image-221.png"
@@ -87,6 +87,20 @@ export default function MyHomeToYoursSection({
                 fill
                 sizes="(max-width: 1440px) 20vw, 287px"
                 className="absolute h-[122.7%] left-[-10.55%] max-w-none top-[-16.58%] w-[112.64%]"
+              />
+            </div>
+          </div>
+
+          {/* Decorative image on right */}
+          <div className="absolute -right-28 top-1 w-[20vw] max-w-[287.212px] hidden lg:block pointer-events-none">
+            <div className="relative w-full" style={{ aspectRatio: "auto" }}>
+              <Image
+                src="/home-assets/window-frame-assets/vine3-hello.png"
+                alt=""
+                width={287}
+                height={477}
+                className="w-full h-auto object-contain scale-x-[-1]"
+                style={{ maxHeight: "476.508px" }}
               />
             </div>
           </div>
@@ -118,9 +132,9 @@ export default function MyHomeToYoursSection({
           </p>
 
           {/* Subtitle */}
-          <div className="flex h-[80px] sm:h-[90px] lg:h-[101.539px] items-center justify-center w-[150px] sm:w-[160px] lg:w-[178.245px] mx-auto mb-6 sm:mb-8">
+          <div className="flex h-[80px] sm:h-[90px] lg:h-[101.539px] items-center justify-center w-[150px] sm:w-[160px] lg:w-[178.245px] ml-[265px] mb-6 sm:mb-8">
             <div className="flex-none rotate-[340.939deg]">
-              <div className="font-['Scribo_Pro',sans-serif] leading-[0.82] not-italic relative text-[#ffa953] text-[18px] sm:text-[22px] md:text-[24px] lg:text-[27px] xl:text-[29.142px] text-center text-nowrap uppercase">
+              <div className="font-['Scribo_Pro',sans-serif] leading-[0.82] not-italic relative text-[#ffa953] text-[14px] sm:text-[22px] md:text-[14px] lg:text-[14px] xl:text-[14] text-center text-nowrap uppercase">
                 <p className="mb-0">
                   {subtitle.split(" ").slice(0, 3).join(" ")}
                 </p>

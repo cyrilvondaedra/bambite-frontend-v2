@@ -22,9 +22,9 @@ export default function HiImBamSection({
   backgroundImage = "/home-assets/hero/forest-bg.png",
 }: HiImBamSectionProps) {
   return (
-    <div className="relative w-full min-h-[816px] overflow-clip">
+    <div className="relative w-full min-h-[816px] overflow-clip bg-[#202730]">
       {/* Background image */}
-      <div className="absolute h-[815.525px] left-0 top-0 w-full">
+      <div className="absolute inset-0">
         <div
           aria-hidden="true"
           className="absolute inset-0 pointer-events-none"
@@ -41,7 +41,7 @@ export default function HiImBamSection({
       </div>
 
       {/* Content */}
-      <div className="relative z-10 pt-16 sm:pt-20 md:pt-24 pb-16 px-4 sm:px-6 lg:px-0">
+      <div className="relative z-10 pt-16 sm:pt-20 md:pt-24 pb-0 px-4 sm:px-6 lg:px-0">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left side - Mascot */}

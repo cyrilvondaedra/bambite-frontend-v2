@@ -103,9 +103,12 @@ function SocketScrew({ className, direction = "left" }: SocketScrewProps) {
 
 export default function Footer() {
   return (
-    <footer className="relative w-full min-h-[821px] overflow-hidden bg-[#202730]">
-      {/* Main container - Responsive */}
-      <div className="relative bg-[#202730] min-h-[821px] overflow-clip w-full max-w-[2084px] mx-auto">
+    <footer className="relative w-full min-h-[821px] overflow-x-auto overflow-y-hidden bg-[#202730]">
+      {/* Main container - Responsive - Centered to focus on middle section (Links content) */}
+      <div
+        className="relative bg-[#202730] min-h-[821px] overflow-visible w-full max-w-[1700px] mx-auto"
+        style={{ transform: "translateX(calc(50vw - 1011px))" }}
+      >
         {/* Blue plate - Left - Hidden on mobile */}
         <div className="hidden lg:block absolute h-[277px] left-[-176px] top-[-87px] w-[321px]">
           <div className="absolute flex inset-0 items-center justify-center">
@@ -218,7 +221,10 @@ export default function Footer() {
           <div className="absolute bottom-[67.27px] left-[2.45px] size-[24px]">
             <SocketScrew className="absolute inset-0" direction="left" />
           </div>
-          <SocketScrew className="absolute bottom-[56.17px] right-[-0.34px] size-[35.105px]" direction="right" />
+          <SocketScrew
+            className="absolute bottom-[56.17px] right-[-0.34px] size-[35.105px]"
+            direction="right"
+          />
           <div className="absolute right-0 size-[24px] top-[55.84px]">
             <SocketScrew className="absolute inset-0" direction="right" />
           </div>
@@ -237,8 +243,15 @@ export default function Footer() {
         </div>
 
         {/* Main content plate - Center - Responsive */}
-        <div className="absolute h-auto min-h-[940px] left-0 lg:left-[451.77px] top-[-7.43px] w-full lg:w-[1190px] px-4 lg:px-0">
-          <div className="absolute flex inset-0 items-center justify-center">
+        <div
+          className="absolute h-auto min-h-[940px] left-0 lg:left-[451.77px] top-[-7.43px] w-full lg:w-[1190px] px-4 lg:px-0 overflow-visible"
+          style={{ zIndex: 100 }}
+        >
+          {/* Background layers - behind everything */}
+          <div
+            className="absolute flex inset-0 items-center justify-center pointer-events-none"
+            style={{ zIndex: -10 }}
+          >
             <div className="flex-none h-[940px] rotate-[180deg] scale-y-[-100%] w-[1190px]">
               <div className="relative size-full">
                 <div className="absolute inset-[-0.27%_-0.21%]">
@@ -246,14 +259,17 @@ export default function Footer() {
                     src={imgRectangle123}
                     alt=""
                     fill
-                    className="block max-w-none size-full"
+                    className="block max-w-none size-full pointer-events-none"
                   />
                 </div>
               </div>
             </div>
           </div>
           {/* Texture overlays */}
-          <div className="absolute contents inset-0">
+          <div
+            className="absolute contents inset-0 pointer-events-none"
+            style={{ zIndex: -10 }}
+          >
             <div className="absolute inset-[0_0_0_0.57%] mix-blend-overlay opacity-30">
               <Image
                 src={imgMetal1Overlay}
@@ -282,42 +298,27 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          {/* Socket screws */}
-          <div className="absolute bottom-[67.27px] left-[2.45px] size-[24px]">
-            <SocketScrew className="absolute inset-0" direction="left" />
-          </div>
-          <SocketScrew className="absolute bottom-[56.17px] right-[-0.34px] size-[35.105px]" direction="right" />
-          <div className="absolute left-[2.45px] size-[24px] top-[55.84px]">
-            <SocketScrew className="absolute inset-0" direction="left" />
-          </div>
-          <div className="absolute right-0 size-[24px] top-[55.84px]">
-            <SocketScrew className="absolute inset-0" direction="right" />
-          </div>
 
-          {/* Footer content - Responsive layout */}
-          <div className="relative pt-[496.84px] pb-8 lg:pt-[496.84px] lg:pb-0">
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 lg:absolute lg:left-[559.23px] lg:top-[496.84px]">
+          {/* Footer content - Responsive layout - On top of background */}
+          <div className="relative pt-[496.84px] pb-8 lg:pt-[496.84px] lg:pb-0 z-50">
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 lg:absolute lg:left-[559.23px] lg:top-[496.84px] z-50">
               <div className="lg:mr-[181px]">
                 <p className="font-['DM_Sans',sans-serif] font-bold leading-[1.18] text-[14px] text-[#75b2eb] uppercase mb-4">
                   Links
                 </p>
                 <div className="flex flex-col gap-[14px] text-white">
-                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">Products</p>
-                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">About</p>
-                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">Blog</p>
-                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">Contact</p>
-                </div>
-              </div>
-
-              <div className="lg:mr-[182px]">
-                <p className="font-['DM_Sans',sans-serif] font-bold leading-[1.18] text-[14px] text-[#75b2eb] uppercase mb-4">
-                  Shop at
-                </p>
-                <div className="flex flex-col gap-[14px] text-white">
-                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">Lazada</p>
-                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">Shopee</p>
-                  <p className="font-['DM_Sans',sans-serif] leading-[1.18] text-[15px]">Privacy Policy</p>
-                  <p className="font-['DM_Sans',sans-serif] leading-[1.18] text-[15px]">Terms and conditions</p>
+                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">
+                    Products
+                  </p>
+                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">
+                    About
+                  </p>
+                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">
+                    Blog
+                  </p>
+                  <p className="font-['Stick_No_Bills',sans-serif] leading-[1.2] text-[20px]">
+                    Contact
+                  </p>
                 </div>
               </div>
 
@@ -341,7 +342,10 @@ export default function Footer() {
           </div>
 
           {/* Decorative vectors */}
-          <div className="absolute h-[126.492px] right-[34.77px] top-[638.91px] w-[219.087px]">
+          <div
+            className="absolute h-[126.492px] right-[34.77px] top-[638.91px] w-[219.087px]"
+            style={{ zIndex: 0 }}
+          >
             <div className="absolute inset-[2.66%_-1.42%_-2.46%_9.63%]">
               <Image
                 src={imgVector184}
@@ -351,7 +355,10 @@ export default function Footer() {
               />
             </div>
           </div>
-          <div className="absolute flex h-[126.492px] items-center justify-center right-[61.47px] top-[94.49px] w-[219.087px]">
+          <div
+            className="absolute flex h-[126.492px] items-center justify-center right-[61.47px] top-[94.49px] w-[219.087px]"
+            style={{ zIndex: 0 }}
+          >
             <div className="flex-none scale-y-[-100%]">
               <div className="h-[126.492px] relative w-[219.087px]">
                 <div className="absolute inset-[2.66%_-1.42%_-2.46%_9.63%]">
@@ -526,7 +533,13 @@ export default function Footer() {
                 </div>
               </div>
               <p className="font-['DM_Sans',sans-serif] font-medium leading-[1.2] opacity-25 relative shrink-0 text-[10.369px] text-white uppercase w-full">
-                In this strange, beautiful world, the ones who remained weren't humans — but little creatures of curiosity, born from leftover circuits, imagination, and a spark of life. And among them was Bam. Bam isn't just playful and mischievous - he is incredibly smart, wildly creative, and endlessly curious. A little foodie genius with boundless energy, a carefree attitude, and a heart full of joy.
+                In this strange, beautiful world, the ones who remained
+                weren&apos;t humans — but little creatures of curiosity, born
+                from leftover circuits, imagination, and a spark of life. And
+                among them was Bam. Bam isn&apos;t just playful and mischievous
+                - he is incredibly smart, wildly creative, and endlessly
+                curious. A little foodie genius with boundless energy, a
+                carefree attitude, and a heart full of joy.
               </p>
             </div>
             {/* Decorative icons */}
@@ -584,9 +597,12 @@ export default function Footer() {
         <div className="hidden lg:block absolute bg-[#ff8b32] blur-[85.358px] filter h-[131.47px] left-[1327.66px] opacity-60 top-[812.32px] w-[796.567px]" />
 
         {/* Right side decorative plates - Hidden on mobile */}
-        <div className="hidden lg:block absolute contents left-[1642px] top-[-221.23px]">
+        <div
+          className="hidden lg:block absolute contents left-[750px] top-[-141.23px]"
+          style={{ zIndex: -1 }}
+        >
           {/* Blue plate */}
-          <div className="absolute h-[277px] left-[1642px] top-[682px] w-[443px]">
+          <div className="absolute h-[277px] left-[750px] top-[762px] w-[443px] z-0">
             <div className="absolute flex inset-0 items-center justify-center">
               <div className="flex-none h-[277px] rotate-[180deg] scale-y-[-100%] w-[443px]">
                 <div className="relative size-full">
@@ -638,7 +654,7 @@ export default function Footer() {
           </div>
 
           {/* Right side plate group */}
-          <div className="absolute contents left-[1687.92px] top-[171.74px]">
+          <div className="absolute contents left-[795.92px] top-[251.74px]">
             <div className="absolute flex inset-[20.92%_-0.48%_16.88%_80.99%] items-center justify-center">
               <div className="flex-none h-[510.692px] rotate-[180deg] scale-y-[-100%] w-[405.975px]">
                 <div className="relative size-full">
@@ -684,17 +700,20 @@ export default function Footer() {
               </div>
             </div>
             {/* Socket screws */}
-            <SocketScrew className="absolute bottom-[210.23px] h-[27.526px] right-[-10.37px] w-[35.105px]" direction="right" />
-            <div className="absolute left-[1687.92px] size-[21.252px] top-[255.7px]">
+            <SocketScrew
+              className="absolute bottom-[210.23px] h-[27.526px] right-[-10.37px] w-[35.105px]"
+              direction="right"
+            />
+            <div className="absolute left-[795.92px] size-[21.252px] top-[335.7px]">
               <SocketScrew className="absolute inset-0" direction="left" />
             </div>
-            <div className="absolute right-[-8.66px] size-[21.252px] top-[237.14px]">
+            <div className="absolute right-[-8.66px] size-[21.252px] top-[317.14px]">
               <SocketScrew className="absolute inset-0" direction="right" />
             </div>
           </div>
 
           {/* Silver plate - Right */}
-          <div className="absolute h-[491px] left-[1643.3px] top-[191.43px] w-[44px]">
+          <div className="absolute h-[491px] left-[751.3px] top-[271.43px] w-[44px] z-[60]">
             <div className="absolute flex inset-0 items-center justify-center">
               <div className="flex-none h-[491px] rotate-[180deg] scale-y-[-100%] w-[44px]">
                 <div className="relative size-full">
@@ -717,22 +736,23 @@ export default function Footer() {
                 className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
               />
             </div>
-            <div className="absolute bottom-[2.92%] flex items-center justify-center left-[22.73%] right-[22.73%] top-1/2">
+            <div className="absolute bottom-[2.92%] flex items-center justify-center left-[22.73%] right-[22.73%] top-1/2 z-[70]">
               <div className="flex-none h-[24px] rotate-[270deg] w-[231.161px]">
                 <p className="font-['Space_Mono',sans-serif] leading-[1.2] opacity-25 relative text-[10.369px] text-white uppercase w-full">
-                  In this strange, beautiful world, the ones who remained weren't humans
+                  In this strange, beautiful world, the ones who remained
+                  weren&apos;t humans
                 </p>
               </div>
             </div>
           </div>
 
           {/* Border plate */}
-          <div className="absolute bg-gradient-to-b border-[#101922] border-[3.173px] border-solid from-[#171e24] h-[235.452px] left-[1642.1px] to-[#1b2229] top-[-43.78px] w-[513.898px]">
+          <div className="absolute bg-gradient-to-b border-[#101922] border-[3.173px] border-solid from-[#171e24] h-[235.452px] left-[750.1px] to-[#1b2229] top-[36.22px] w-[513.898px]">
             <div className="absolute inset-[-1.587px] pointer-events-none shadow-[inset_6.346px_6.346px_1.269px_0px_rgba(226,239,255,0.15)]" />
           </div>
 
           {/* Decorative group */}
-          <div className="absolute h-[355.599px] left-[1714.3px] top-[-221.23px] w-[419.868px]">
+          <div className="absolute h-[355.599px] left-[822.3px] top-[-141.23px] w-[419.868px]">
             <div className="absolute inset-[-0.66%_-0.56%]">
               <Image
                 src={imgGroup136}
@@ -744,7 +764,7 @@ export default function Footer() {
           </div>
 
           {/* Decorative elements */}
-          <div className="absolute content-stretch flex gap-[6.938px] items-center left-[1732.3px] top-[246.32px]">
+          <div className="absolute content-stretch flex gap-[6.938px] items-center left-[840.3px] top-[326.32px]">
             <div className="flex items-center justify-center relative shrink-0 size-[10.648px]">
               <div className="flex-none rotate-[45deg]">
                 <div className="bg-[#252b39] size-[7.529px]" />
@@ -763,7 +783,7 @@ export default function Footer() {
           </div>
 
           {/* Air vents */}
-          <div className="absolute content-stretch flex gap-[4.442px] items-center left-[1909.53px] top-[227.79px]">
+          <div className="absolute content-stretch flex gap-[4.442px] items-center left-[1017.53px] top-[307.79px]">
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
@@ -775,14 +795,17 @@ export default function Footer() {
           </div>
 
           {/* Orange blur */}
-          <div className="absolute flex h-[415.623px] items-center justify-center left-[1971.68px] top-[-85.83px] w-[99.855px]">
+          <div className="absolute flex h-[415.623px] items-center justify-center left-[1079.68px] top-[-5.83px] w-[99.855px]">
             <div className="flex-none rotate-[270deg]">
               <div className="bg-[#ff8b32] blur-[85.358px] filter h-[99.855px] opacity-60 w-[415.623px]" />
             </div>
           </div>
 
           {/* Subtract line */}
-          <div className="absolute flex h-[1148.855px] items-center justify-center right-0 top-[567.21px] w-[75.749px]">
+          <div
+            className="absolute flex h-[1148.855px] items-center justify-center left-[1200px] top-[567.21px] w-[75.749px]"
+            style={{ zIndex: -1 }}
+          >
             <div className="flex-none rotate-[90deg] scale-y-[-100%]">
               <div className="h-[75.749px] relative w-[1148.855px]">
                 <div className="absolute inset-[-1.68%_-0.28%_-6.7%_-0.28%]">
@@ -798,13 +821,16 @@ export default function Footer() {
           </div>
 
           {/* Large C0 text */}
-          <p className="absolute font-['Stick_No_Bills',sans-serif] font-normal leading-[0.82] left-[1720.37px] opacity-[0.15] text-[#d4dce8] text-[277.875px] uppercase top-[266.99px]">
+          <p className="absolute font-['Stick_No_Bills',sans-serif] font-normal leading-[0.82] left-[828.37px] opacity-[0.15] text-[#d4dce8] text-[277.875px] uppercase top-[346.99px]">
             C0
           </p>
         </div>
 
         {/* Vines - Hidden on mobile */}
-        <div className="hidden lg:block absolute h-[399.394px] left-[1550.48px] top-0 w-[206.809px]">
+        <div
+          className="hidden lg:block absolute h-[399.394px] left-[658.48px] top-0 w-[206.809px]"
+          style={{ zIndex: 0 }}
+        >
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <Image
               src={imgVines1}
@@ -816,7 +842,10 @@ export default function Footer() {
         </div>
 
         {/* Image 220 - Hidden on mobile */}
-        <div className="hidden lg:block absolute h-[249.457px] left-[347.05px] top-0 w-[279.414px]">
+        <div
+          className="hidden lg:block absolute h-[249.457px] left-[347.05px] top-0 w-[279.414px]"
+          style={{ zIndex: 0 }}
+        >
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <Image
               src={imgImage220}
@@ -829,8 +858,10 @@ export default function Footer() {
       </div>
 
       {/* Orange blur at top - Hidden on mobile */}
-      <div className="hidden lg:block absolute bg-[#ff8b32] blur-[85.358px] filter h-[76.928px] left-[1051.42px] opacity-60 top-[-69.66px] w-[631.929px]" />
+      <div
+        className="hidden lg:block absolute bg-[#ff8b32] blur-[85.358px] filter h-[76.928px] left-[1051.42px] opacity-60 top-[-69.66px] w-[631.929px]"
+        style={{ zIndex: 0 }}
+      />
     </footer>
   );
 }
-

@@ -2,7 +2,6 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 type ExploreCuisineSectionProps = {
   title?: string;
@@ -12,14 +11,17 @@ type ExploreCuisineSectionProps = {
 
 export default function ExploreCuisineSection({
   title = "Explore All New Cuisine",
-  image = "/home-assets/hero/food-dish.png",
+  image = "/home-assets/hero/explore.png",
   decorativeText = "Everything new",
 }: ExploreCuisineSectionProps) {
   return (
     <div className="relative w-full min-h-[508px] overflow-hidden">
       {/* Background image with overlay */}
       <div className="absolute h-[508.262px] left-0 top-0 w-full">
-        <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 pointer-events-none"
+        >
           <Image
             src={image}
             alt=""
@@ -67,24 +69,46 @@ export default function ExploreCuisineSection({
       <div className="relative z-10 pt-16 sm:pt-20 md:pt-24 pb-16 px-4 sm:px-6 lg:px-0 min-h-[508px] flex items-center">
         <div className="max-w-7xl mx-auto w-full">
           <h2 className="font-['Chillax_Variable',sans-serif] leading-[0.95] not-italic text-[32px] sm:text-[44px] md:text-[52px] lg:text-[69.339px] text-white mb-8 sm:mb-12">
-            {title}
+            {title.includes("New Cuisine") ? (
+              <>
+                {title.replace(" New Cuisine", "")}
+                <br />
+                New Cuisine
+              </>
+            ) : (
+              <>
+                Explore All
+                <br />
+                New Cuisine
+              </>
+            )}
           </h2>
-
-          {/* Decorative icon */}
-          <div className="absolute h-[108.284px] right-[37.75px] top-[2513.11px] w-[119.52px] hidden lg:block">
-            <div className="absolute inset-[-0.98%_-0.93%_-0.98%_0]">
-              <Image
-                src="/footer-assets/group-184.svg"
-                alt=""
-                fill
-                sizes="120px"
-                className="block max-w-none size-full"
-              />
-            </div>
-          </div>
         </div>
+      </div>
+
+      {/* "Everything new" decorative text - hidden on mobile for cleaner look */}
+      <div className="absolute flex h-[79.667px] items-center justify-center left-[calc(50%+101.69px)] bottom-[100px] translate-x-[-50%] w-[173.279px] hidden lg:block">
+        <div className="flex-none rotate-[341deg]">
+          <p
+            className="font-['Scribo_Pro',sans-serif] leading-[0.82] not-italic relative text-[#ff9e3e] text-[10px] sm:text-[14px] md:text-[20px] text-center text-nowrap uppercase"
+            data-node-id="609:8244"
+          >
+            {decorativeText}
+          </p>
+        </div>
+      </div>
+
+      {/* Arrow icon - positioned after "Everything new" text, vertically centered */}
+      <div className="absolute top-1/2 left-[calc(50%+101.69px+173.279px+20px)] -translate-y-1/2 translate-x-[-50%] h-[108.284px] w-[119.52px] hidden lg:block pointer-events-none">
+        <Image
+          src="/footer-assets/group-184.svg"
+          alt=""
+          fill
+          sizes="120px"
+          className="block max-w-none size-full"
+          data-node-id="609:7874"
+        />
       </div>
     </div>
   );
 }
-

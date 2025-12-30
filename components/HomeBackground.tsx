@@ -15,30 +15,16 @@ export default function HomeBackground({
 }: HomeBackgroundProps) {
   return (
     <div className={`relative w-full min-h-[853px] overflow-hidden ${className}`}>
-      {/* Base background image */}
+      {/* Single background image */}
       <div className="absolute h-[853.168px] left-0 top-0 w-full">
         <Image
-          src="/home-assets/hero/wide-angle-bg.png"
+          src="/home-assets/hero/Bambite-background copy.jpg"
           alt=""
           fill
           sizes="100vw"
           className="object-cover pointer-events-none"
           priority
         />
-      </div>
-
-      {/* Food dish image overlay */}
-      <div className="absolute h-[744.724px] left-[127.73px] top-[22.17px] w-[940.273px] hidden lg:block">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <Image
-            src="/home-assets/hero/food-dish.png"
-            alt="Food dish"
-            fill
-            sizes="940px"
-            className="object-cover"
-            priority
-          />
-        </div>
       </div>
 
       {/* Dark gradient overlay at top */}
