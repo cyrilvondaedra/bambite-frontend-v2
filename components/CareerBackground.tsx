@@ -12,9 +12,9 @@ export default function CareerBackground({
   className = "",
 }: CareerBackgroundProps) {
   return (
-    <div className={`relative w-full min-h-screen bg-white ${className}`}>
+    <div className={`relative w-full min-h-screen bg-white overflow-x-hidden ${className}`}>
       {/* Dark blue plate background */}
-      <div className="absolute h-[1146px] left-[-4px] top-0 w-full">
+      <div className="absolute h-[1146px] left-0 top-0 w-full">
         <div className="absolute flex inset-0 items-center justify-center">
           <div className="flex-none h-[1146px] rotate-[180deg] scale-y-[-100%] w-full">
             <div className="relative size-full">
@@ -64,20 +64,20 @@ export default function CareerBackground({
       </div>
 
       {/* Orange blur effects */}
-      <div className="absolute flex h-[462.018px] items-center justify-center left-[calc(100%-32.45px)] top-[396.09px] w-[129.171px] hidden lg:block">
+      <div className="absolute flex h-[462.018px] items-center justify-center right-0 top-[396.09px] w-[129.171px] hidden lg:block max-w-[100vw]">
         <div className="flex-none rotate-[90deg]">
           <div className="bg-[#ff8b32] blur-[49.36px] filter h-[129.171px] opacity-30 rounded-[999px] w-[462.018px]" />
         </div>
       </div>
 
-      <div className="absolute flex h-[129.171px] items-center justify-center left-[8.51px] top-[1043.91px] w-[675.135px] hidden lg:block">
+      <div className="absolute flex h-[129.171px] items-center justify-center left-[8.51px] top-[1043.91px] w-[675.135px] max-w-[calc(100vw-8.51px)] hidden lg:block">
         <div className="flex-none rotate-[180deg]">
           <div className="bg-[#ff8b32] blur-[49.36px] filter h-[129.171px] opacity-30 rounded-[999px] w-[675.135px]" />
         </div>
       </div>
 
       {/* Vertical separator lines */}
-      <div className="absolute flex h-[2.018px] items-center justify-center left-[-4.95px] top-[429.23px] w-[1776.572px] hidden lg:block">
+      <div className="absolute flex h-[2.018px] items-center justify-center left-0 top-[429.23px] w-full max-w-[100vw] hidden lg:block overflow-hidden">
         <div className="flex-none rotate-[90deg]">
           <div className="h-[1776.572px] relative w-[2.018px]">
             <Image
@@ -91,7 +91,7 @@ export default function CareerBackground({
         </div>
       </div>
 
-      <div className="absolute h-[1776.572px] left-[calc(18.75%+70.21px)] top-[429.23px] w-[2.018px] hidden lg:block">
+      <div className="absolute h-[1776.572px] left-[calc(18.75%+70.21px)] top-[429.23px] w-[2.018px] hidden lg:block max-w-[calc(100vw-18.75%-70.21px)]">
         <Image
           src="/career-assets/group-181.svg"
           alt=""
@@ -102,7 +102,7 @@ export default function CareerBackground({
       </div>
 
       {/* Decorative C2 text - Hidden on mobile */}
-      <p className="absolute font-['Post_No_Bills_Colombo_SemiBold',sans-serif] leading-[0.82] left-[calc(93.75%-133.13px)] not-italic text-[#252f3a] text-[120px] sm:text-[150px] md:text-[186.464px] text-nowrap top-[226.95px] opacity-10 hidden lg:block">
+      <p className="absolute font-['Post_No_Bills_Colombo_SemiBold',sans-serif] leading-[0.82] right-[200px] xl:right-[300px] not-italic text-[#252f3a] text-[120px] sm:text-[150px] md:text-[186.464px] text-nowrap top-[226.95px] opacity-10 hidden lg:block pointer-events-none whitespace-nowrap">
         C2
       </p>
 

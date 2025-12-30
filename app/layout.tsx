@@ -97,9 +97,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-x-hidden">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSansThaiLooped.variable} ${dmSans.variable} ${spaceMono.variable} ${stickNoBills.variable} ${chillaxSemibold.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSansThaiLooped.variable} ${dmSans.variable} ${spaceMono.variable} ${stickNoBills.variable} ${chillaxSemibold.variable} antialiased overflow-x-hidden`}
       >
         <CartProvider>
           <NavbarV2 />
