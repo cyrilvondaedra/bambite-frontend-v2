@@ -102,7 +102,7 @@ export default function CartSidebar() {
               <div className="flex items-center justify-center relative shrink-0 w-full">
                 <div className="flex-none rotate-[180deg] w-full">
                   <Link
-                    href="/checkout"
+                    href="/coming-soon"
                     onClick={closeCart}
                     className="bg-gradient-to-b border border-[#193551] border-solid content-stretch flex from-[#074980] h-[58px] items-center relative to-[#172743] w-full overflow-hidden rounded-lg block"
                   >
@@ -193,4 +193,3 @@ export default function CartSidebar() {
     </>
   );
 }
-

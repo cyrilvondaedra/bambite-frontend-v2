@@ -97,6 +97,8 @@ export default function ProductDetailsPanel({
     if (onBuyNow) {
       onBuyNow(quantity, selectedSize);
     }
+    // Redirect to coming-soon page
+    router.push("/coming-soon");
   };
 
   return (
@@ -335,7 +337,7 @@ export default function ProductDetailsPanel({
                         Buy Now
                       </p>
                       <p className="relative shrink-0 text-white">
-                        {price} {currency}
+                        {(price * quantity)} {currency}
                       </p>
                     </div>
                   </div>
