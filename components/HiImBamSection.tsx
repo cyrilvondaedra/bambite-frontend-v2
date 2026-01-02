@@ -22,7 +22,7 @@ export default function HiImBamSection({
   backgroundImage = "/home-assets/hero/compressed_hi-section-bg.webp",
 }: HiImBamSectionProps) {
   return (
-    <div className="relative w-full min-h-[816px] overflow-clip bg-[#202730]">
+    <div className="relative w-full min-h-[816px] overflow-hidden bg-[#202730]">
       {/* Background image */}
       <div className="absolute inset-0">
         <div
@@ -46,17 +46,28 @@ export default function HiImBamSection({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left side - Mascot */}
             <div className="order-2 lg:order-1">
-              <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[789.168px] w-full overflow-hidden">
-                <div className="absolute w-full left-0 right-0 -top-[400px] bottom-0">
-                  <Image
-                    src={mascotImage}
-                    alt="Bam mascot"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-contain"
-                    style={{ objectPosition: "bottom center" }}
-                    priority
-                  />
+              {/* Container with overflow visible to allow image extension */}
+              <div className="relative h-[500px] sm:h-[600px] md:h-[700px] lg:h-[789.168px] w-full overflow-visible">
+                {/* Image positioned at bottom with negative bottom to push it down further */}
+                <div
+                  className="absolute inset-x-0"
+                  style={{
+                    bottom: "-100px",
+                    top: "-600px",
+                    height: "calc(100% + 700px)",
+                  }}
+                >
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={mascotImage}
+                      alt="Bam mascot"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-contain"
+                      style={{ objectPosition: "bottom center" }}
+                      priority
+                    />
+                  </div>
                 </div>
               </div>
             </div>
