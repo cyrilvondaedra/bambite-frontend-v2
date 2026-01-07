@@ -1,18 +1,22 @@
 // Related Products Section component
 import Image from "next/image";
 import ProductCard from "./ProductCard";
+import ProductCardSkeleton from "./ProductCardSkeleton";
 import { Product } from "./MenuSection";
 
 type RelatedProductsSectionProps = {
   products: Product[];
   title?: string;
+  loading?: boolean;
 };
 
 export default function RelatedProductsSection({
   products,
   title = "You may also like",
+  loading = false,
 }: RelatedProductsSectionProps) {
-  if (!products || products.length === 0) {
+  // Show skeleton or empty state
+  if (loading || !products || products.length === 0) {
     return null;
   }
 
@@ -88,18 +92,22 @@ export default function RelatedProductsSection({
             )}
           </h2>
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            {products.map((product) => (
-              <ProductCard
-                key={product.id}
-                id={product.id}
-                image={product.image}
-                title={product.title}
-                titleThai={product.titleThai}
-                price={product.price}
-                description={product.description}
-                size="small"
-              />
-            ))}
+            {loading
+              ? Array.from({ length: 3 }).map((_, index) => (
+                  <ProductCardSkeleton key={index} size="small" />
+                ))
+              : products.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    id={product.id}
+                    image={product.image}
+                    title={product.title}
+                    titleThai={product.titleThai}
+                    price={product.price}
+                    description={product.description}
+                    size="small"
+                  />
+                ))}
           </div>
         </div>
       </div>

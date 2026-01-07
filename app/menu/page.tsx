@@ -8,6 +8,7 @@ import MenuBackground from "@/components/MenuBackground";
 import FilterPanel from "@/components/FilterPanel";
 import { Product } from "@/components/MenuSection";
 import ProductCard from "@/components/ProductCard";
+import ProductCardSkeleton from "@/components/ProductCardSkeleton";
 import { getProducts } from "@/lib/api/products";
 import {
   mapApiProductsToProducts,
@@ -193,8 +194,10 @@ export default function FoodMenuPage() {
             {/* Products Grid */}
             <div className="w-full">
               {loading ? (
-                <div className="flex items-center justify-center py-20">
-                  <p className="text-[#273b4f] text-lg">Loading products...</p>
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <ProductCardSkeleton key={index} />
+                  ))}
                 </div>
               ) : error ? (
                 <div className="flex items-center justify-center py-20">
