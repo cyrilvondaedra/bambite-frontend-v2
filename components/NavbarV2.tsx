@@ -104,7 +104,7 @@ function NavItem({
           <div className="absolute h-[6.902px] left-1/2 top-[19.55px] translate-x-[-50%] w-[73.373px] hidden sm:block">
             <div className="absolute inset-0">
               <Image
-                src="/navbar-assets/vector-215.svg"
+                src="/navbar-assets/active-state.svg"
                 alt=""
                 width={73}
                 height={7}

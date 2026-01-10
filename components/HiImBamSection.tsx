@@ -105,27 +105,6 @@ export default function HiImBamSection({
                     }}
                   >
                     {/* 2. Texture overlays */}
-                    <div className="absolute inset-0 pointer-events-none">
-                      {/* Metal/Grunge Texture */}
-                      <div className="absolute inset-0 mix-blend-overlay opacity-30">
-                        <Image
-                          src="/product-assets/metal-overlay.webp"
-                          alt=""
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-
-                      {/* Grunge Detail */}
-                      <div className="absolute inset-0 mix-blend-lighten opacity-30">
-                        <Image
-                          src="/product-assets/grunge-overlay.webp"
-                          alt=""
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
-                    </div>
 
                     {/* 3. Button Content Wrapper */}
                     <div className="relative z-10 flex items-center h-full px-6 sm:px-8">

@@ -21,37 +21,6 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* Texture Overlays for Section 1 */}
-        <div className="absolute contents inset-0">
-          <div className="absolute h-full left-[0.03%] mix-blend-soft-light opacity-80 right-[0.02%] top-0">
-            <Image
-              src="/product-assets/metal-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute flex h-full items-center justify-center left-[-0.02%] mix-blend-soft-light right-[0.01%] top-0">
-            <div className="flex-none h-full -scale-y-100 w-full">
-              <div className="opacity-30 relative size-full">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 pointer-events-none"
-                >
-                  <Image
-                    src="/product-assets/grunge-overlay.webp"
-                    alt=""
-                    fill
-                    sizes="100vw"
-                    className="absolute max-w-none object-cover size-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Content for Section 1 - ONLY intro text */}
         <div className="relative z-10 min-h-screen flex items-end justify-center px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20 md:pb-24">
           <div className="w-full max-w-[900px] text-center">
@@ -76,37 +45,6 @@ export default function AboutPage() {
             className="object-cover"
             priority
           />
-        </div>
-
-        {/* Texture Overlays for Section 2 */}
-        <div className="absolute contents inset-0">
-          <div className="absolute h-full left-[0.03%] mix-blend-soft-light opacity-80 right-[0.02%] top-0">
-            <Image
-              src="/product-assets/metal-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute flex h-full items-center justify-center left-[-0.02%] mix-blend-soft-light right-[0.01%] top-0">
-            <div className="flex-none h-full -scale-y-100 w-full">
-              <div className="opacity-30 relative size-full">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 pointer-events-none"
-                >
-                  <Image
-                    src="/product-assets/grunge-overlay.webp"
-                    alt=""
-                    fill
-                    sizes="100vw"
-                    className="absolute max-w-none object-cover size-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* Content for Section 2 - ALL content */}
@@ -284,37 +222,6 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* Texture Overlays for Section 3 */}
-        <div className="absolute contents inset-0">
-          <div className="absolute h-full left-[0.03%] mix-blend-soft-light opacity-80 right-[0.02%] top-0">
-            <Image
-              src="/product-assets/metal-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute flex h-full items-center justify-center left-[-0.02%] mix-blend-soft-light right-[0.01%] top-0">
-            <div className="flex-none h-full -scale-y-100 w-full">
-              <div className="opacity-30 relative size-full">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 pointer-events-none"
-                >
-                  <Image
-                    src="/product-assets/grunge-overlay.webp"
-                    alt=""
-                    fill
-                    sizes="100vw"
-                    className="absolute max-w-none object-cover size-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Content for Section 3 - Vision only */}
         <div className="relative z-10 min-h-screen flex items-end pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-[1400px] mx-auto w-full">
@@ -350,35 +257,6 @@ export default function AboutPage() {
         </div>
 
         {/* Texture Overlays for Section 4 */}
-        <div className="absolute contents inset-0">
-          <div className="absolute h-full left-[0.03%] mix-blend-soft-light opacity-80 right-[0.02%] top-0">
-            <Image
-              src="/product-assets/metal-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute flex h-full items-center justify-center left-[-0.02%] mix-blend-soft-light right-[0.01%] top-0">
-            <div className="flex-none h-full -scale-y-100 w-full">
-              <div className="opacity-30 relative size-full">
-                <div
-                  aria-hidden="true"
-                  className="absolute inset-0 pointer-events-none"
-                >
-                  <Image
-                    src="/product-assets/grunge-overlay.webp"
-                    alt=""
-                    fill
-                    sizes="100vw"
-                    className="absolute max-w-none object-cover size-full"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Content for Section 4 - Location content */}
         <div className="relative z-10 pt-16 sm:pt-20 md:pt-24 pb-8 sm:pb-12 md:pb-16 px-4 sm:px-6 lg:px-8">

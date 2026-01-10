@@ -44,21 +44,6 @@ export default function ProductDetailsBackground({
         </div>
       </div>
 
-      {/* Vertical separator line */}
-      <div className="absolute flex h-[2.309px] items-center justify-center left-[-1.7px] top-[146.68px] w-[1531.697px] hidden lg:block">
-        <div className="flex-none rotate-[270deg] scale-y-[-100%]">
-          <div className="h-[1531.697px] relative w-[2.309px]">
-            <Image
-              src="/product-details-assets/group-186.svg"
-              alt=""
-              fill
-              sizes="2px"
-              className="block max-w-none"
-            />
-          </div>
-        </div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10">{children}</div>
     </div>

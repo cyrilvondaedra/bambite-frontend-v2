@@ -232,7 +232,7 @@ export default function PortalScrollSection({
             <Image
               src={
                 isMobile
-                  ? "/home-assets/window-frame-assets/mobile-scence.png"
+                  ? "/home-assets/window-frame-assets/mobile-scence.webp"
                   : "/home-assets/window-frame-assets/jungle-bg.webp"
               }
               alt="Background scene"
@@ -341,26 +341,6 @@ export default function PortalScrollSection({
                         border: "2px solid #193551",
                       }}
                     >
-                      {/* Texture overlays */}
-                      <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute inset-0 mix-blend-overlay opacity-30">
-                          <Image
-                            src="/product-assets/metal-overlay.webp"
-                            alt=""
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <div className="absolute inset-0 mix-blend-lighten opacity-30">
-                          <Image
-                            src="/product-assets/grunge-overlay.webp"
-                            alt=""
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-
                       {/* Button Content */}
                       <div className="relative z-10 flex items-center h-full px-6 sm:px-8">
                         <p className="font-['Space_Mono',sans-serif] font-bold leading-none text-[11px] sm:text-[12px] md:text-[13px] lg:text-[13.484px] text-white uppercase group-hover:opacity-90 transition-opacity">

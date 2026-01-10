@@ -223,43 +223,6 @@ export default function ProductDetailsPanel({
         <div className="flex items-center justify-center relative shrink-0 w-full">
           <div className="flex-none rotate-[180deg] w-full">
             <div className="bg-gradient-to-b border border-[#193551] border-solid content-stretch flex from-[#074980] h-[40px] sm:h-[42px] md:h-[44px] items-center relative to-[#172743] w-full rounded-lg overflow-hidden">
-              {/* Texture overlays */}
-              <div className="absolute contents inset-[-0.5px_calc(-0.08%-0.5px)_-0.5px_-0.5px]">
-                <div className="absolute inset-[0_-0.08%_0_0.57%] mix-blend-overlay opacity-30">
-                  <Image
-                    src="/product-assets/metal-overlay.webp"
-                    alt=""
-                    fill
-                    sizes="520px"
-                    className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none"
-                  />
-                </div>
-                <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-lighten">
-                  <div className="flex-none h-full scale-y-[-100%] w-full">
-                    <div className="opacity-[0.34] relative size-full">
-                      <Image
-                        src="/product-assets/grunge-overlay.webp"
-                        alt=""
-                        fill
-                        sizes="520px"
-                        className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-soft-light">
-                  <div className="flex-none h-full rotate-[180deg] scale-y-[-100%] w-full">
-                    <div
-                      className="opacity-30 size-full"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(rgba(128, 128, 128, 0.6) 0%, rgb(128, 128, 128) 19.684%, rgba(128, 128, 128, 0.3) 70.46%, rgb(128, 128, 128) 100%)",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
               {/* Add to Cart Button */}
               <button
                 onClick={handleAddToCart}
@@ -365,43 +328,6 @@ export default function ProductDetailsPanel({
               onClick={handleBuyNow}
               className="bg-gradient-to-b border border-[#070f17] border-solid content-stretch flex from-[#171e24] h-[40px] sm:h-[42px] md:h-[44px] items-center relative to-[#1b2229] w-full rounded-lg overflow-hidden cursor-pointer"
             >
-              {/* Texture overlays */}
-              <div className="absolute contents inset-[-0.5px_calc(-0.08%-0.5px)_calc(0%-0.5px)_-0.5px]">
-                <div className="absolute inset-[0_-0.08%_0_0.57%] mix-blend-overlay opacity-30">
-                  <Image
-                    src="/product-assets/metal-overlay.webp"
-                    alt=""
-                    fill
-                    sizes="520px"
-                    className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none"
-                  />
-                </div>
-                <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-lighten">
-                  <div className="flex-none h-full scale-y-[-100%] w-full">
-                    <div className="opacity-[0.34] relative size-full">
-                      <Image
-                        src="/product-assets/grunge-overlay.webp"
-                        alt=""
-                        fill
-                        sizes="520px"
-                        className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-soft-light">
-                  <div className="flex-none h-full rotate-[180deg] scale-y-[-100%] w-full">
-                    <div
-                      className="opacity-30 size-full"
-                      style={{
-                        backgroundImage:
-                          "linear-gradient(rgba(128, 128, 128, 0.6) 0%, rgb(128, 128, 128) 19.684%, rgba(128, 128, 128, 0.3) 70.46%, rgb(128, 128, 128) 100%)",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-
               {/* Button Content */}
               <div className="basis-0 content-stretch flex gap-[16px] grow h-full items-center min-h-px min-w-px pl-[8px] pr-[15px] py-0 relative shrink-0 z-10">
                 <div className="basis-0 flex grow items-center justify-center min-h-px min-w-px relative shrink-0">

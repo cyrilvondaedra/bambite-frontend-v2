@@ -117,19 +117,7 @@ export default function CartSidebar() {
                           className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
                         />
                       </div>
-                      <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-lighten">
-                        <div className="flex-none h-[58px] scale-y-[-100%] w-full">
-                          <div className="opacity-[0.34] relative size-full">
-                            <Image
-                              src="/product-assets/grunge-overlay.webp"
-                              alt=""
-                              fill
-                              sizes="466px"
-                              className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-                            />
-                          </div>
-                        </div>
-                      </div>
+
                       <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-soft-light">
                         <div className="flex-none h-[58px] rotate-[180deg] scale-y-[-100%] w-full">
                           <div

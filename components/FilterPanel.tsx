@@ -28,20 +28,6 @@ export default function FilterPanel({
         />
       </div>
 
-      {/* Border rectangle */}
-      {/* <div className="absolute h-full sm:h-[395.524px] left-[-13px] top-[-13px] w-[calc(100%+26px)] sm:w-[308.088px]">
-        <div className="absolute inset-[0_0_-0.76%_0]">
-          <Image
-            src="/filter-assets/rectangle-312.svg"
-            alt=""
-            fill
-            sizes="(max-width: 640px) calc(100vw + 26px), 308px"
-            className="block max-w-none size-full object-cover"
-            style={{ stroke: "rgba(143, 165, 174, 1)" }}
-          />
-        </div>
-      </div> */}
-
       {/* Filter title */}
       <p className="absolute font-['Space_Mono',monospace] leading-none left-[20px] sm:left-[30.64px] not-italic opacity-90 text-[13px] text-white top-[24px] sm:top-[36.26px] uppercase font-bold z-10">
         Filter

@@ -95,19 +95,7 @@ export default function JobCard({ job, onApply }: JobCardProps) {
                   </div>
                 </div>
               </div>
-              <div className="absolute flex h-full items-center justify-center left-[0.12%] mix-blend-soft-light right-[-0.12%] top-0">
-                <div className="flex-none h-full rotate-[180deg] scale-y-[-100%] w-full">
-                  <div className="opacity-30 relative size-full">
-                    <Image
-                      src="/product-assets/grunge-overlay.webp"
-                      alt=""
-                      fill
-                      sizes="334px"
-                      className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-                    />
-                  </div>
-                </div>
-              </div>
+
               <div className="absolute flex h-full items-center justify-center left-[0.12%] mix-blend-soft-light right-[-0.12%] top-0">
                 <div className="flex-none h-full scale-y-[-100%] w-full">
                   <div

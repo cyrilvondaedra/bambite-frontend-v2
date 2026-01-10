@@ -59,72 +59,17 @@ export default function OrangeSeeDetailButton({
     >
       {/* Orange plate background */}
       <div className="absolute left-0 size-full top-0">
-        <div className="absolute flex inset-0 items-center justify-center">
-          <div className="flex-none rotate-180 -scale-y-100 size-full">
-            <div className="relative size-full">
-              <div className="absolute inset-[-1.5%]">
-                <Image
-                  src="/footer-assets/rectangle-121-orange.svg"
-                  alt=""
-                  fill
-                  sizes={`${buttonSize}`}
-                  className="block max-w-none w-full h-full object-contain"
-                />
-              </div>
-            </div>
-          </div>
+        <div className="absolute inset-0">
+          <Image
+            src="/home-assets/hero/orange-plate-bg.webp"
+            alt=""
+            fill
+            sizes={`${buttonSize}`}
+            className="object-cover"
+          />
         </div>
 
         {/* Texture overlays */}
-        <div className="absolute contents inset-[0_-0.08%_0_0]">
-          {/* Metal 1 overlay */}
-          <div
-            className="absolute mix-blend-overlay pointer-events-none"
-            style={{
-              inset: designTokens.effects.orangeButton.metalOverlay.inset,
-              opacity: designTokens.effects.orangeButton.metalOverlay.opacity,
-            }}
-          >
-            <Image
-              src="/product-assets/metal-overlay.webp"
-              alt=""
-              fill
-              sizes={`${buttonSize}`}
-              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-            />
-          </div>
-
-          {/* Grunge overlay */}
-          <div
-            className="absolute mix-blend-lighten pointer-events-none"
-            style={{
-              inset: designTokens.effects.orangeButton.grungeOverlay.inset,
-              opacity: designTokens.effects.orangeButton.grungeOverlay.opacity,
-            }}
-          >
-            <Image
-              src="/product-assets/grunge-overlay.webp"
-              alt=""
-              fill
-              sizes={`${buttonSize}`}
-              className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-            />
-          </div>
-
-          {/* Gradient overlay */}
-          <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-soft-light">
-            <div className="flex-none h-full rotate-180 -scale-y-100 w-full">
-              <div
-                className="size-full"
-                style={{
-                  opacity:
-                    designTokens.effects.orangeButton.gradientOverlay.opacity,
-                  backgroundImage: designTokens.colors.gradientOverlay,
-                }}
-              />
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Text */}
