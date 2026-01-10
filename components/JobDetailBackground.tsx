@@ -15,53 +15,17 @@ export default function JobDetailBackground({
     <div
       className={`relative w-full min-h-screen bg-white overflow-hidden overflow-x-hidden ${className}`}
     >
-      {/* Dark blue plate background */}
+      {/* Background image */}
       <div className="absolute inset-0 w-full h-full min-h-screen overflow-hidden">
-        <div className="absolute flex inset-0 items-center justify-center">
-          <div className="flex-none h-full min-h-[1040.093px] rotate-[180deg] scale-y-[-100%] w-full">
-            <div className="relative size-full">
-              <Image
-                src="/career-assets/rectangle-121.svg"
-                alt=""
-                fill
-                sizes="100vw"
-                className="block max-w-none size-full"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-        {/* Texture overlays */}
-        <div className="absolute contents inset-0">
-          <div className="absolute inset-[0_0_38.78%_0.31%] mix-blend-overlay opacity-30">
-            <Image
-              src="/product-assets/metal-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute inset-[0_0_38.78%_-0.26%] mix-blend-lighten opacity-[0.19]">
-            <Image
-              src="/product-assets/grunge-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute flex inset-[0_0_38.78%_-0.26%] items-center justify-center mix-blend-soft-light">
-            <div className="flex-none h-[1040.093px] rotate-[180deg] scale-y-[-100%] w-full">
-              <div
-                className="opacity-30 size-full"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(128, 128, 128, 0.6) 0%, rgb(128, 128, 128) 19.684%, rgba(128, 128, 128, 0.3) 70.46%, rgb(128, 128, 128) 100%)",
-                }}
-              />
-            </div>
-          </div>
+        <div className="absolute inset-0">
+          <Image
+            src="/career-assets/career-bg.webp"
+            alt="Job detail background"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
 

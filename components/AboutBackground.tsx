@@ -53,21 +53,7 @@ export default function AboutBackground({
             className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
           />
         </div>
-        <div className="absolute flex h-full items-center justify-center left-[-0.02%] mix-blend-soft-light right-[0.01%] top-0">
-          <div className="flex-none h-full -scale-y-100 w-full">
-            <div className="opacity-30 relative size-full">
-              <div aria-hidden="true" className="absolute inset-0 pointer-events-none">
-                <Image
-                  src="/product-assets/grunge-overlay.webp"
-                  alt=""
-                  fill
-                  sizes="100vw"
-                  className="absolute max-w-none object-cover size-full"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+
         <div className="absolute flex h-full items-center justify-center left-[-0.02%] mix-blend-soft-light right-[0.01%] top-0">
           <div className="flex-none h-full rotate-180 -scale-y-100 w-full">
             <div
@@ -86,4 +72,3 @@ export default function AboutBackground({
     </div>
   );
 }
-

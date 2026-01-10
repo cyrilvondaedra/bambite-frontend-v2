@@ -42,19 +42,7 @@ export default function NewTasteSection({ products }: NewTasteSectionProps) {
             className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
           />
         </div>
-        <div className="absolute flex h-full items-center justify-center left-0 mix-blend-soft-light right-[0.53%] top-0">
-          <div className="flex-none h-full -scale-y-100 w-[1521.967px]">
-            <div className="opacity-30 relative size-full">
-              <Image
-                src="/product-assets/grunge-overlay.webp"
-                alt=""
-                fill
-                sizes="100vw"
-                className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-              />
-            </div>
-          </div>
-        </div>
+
         <div className="absolute flex h-full items-center justify-center left-0 mix-blend-soft-light right-[0.52%] top-0">
           <div className="flex-none h-full rotate-180 -scale-y-100 w-[1521.967px]">
             <div

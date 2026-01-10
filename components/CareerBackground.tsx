@@ -15,61 +15,25 @@ export default function CareerBackground({
     <div
       className={`relative w-full bg-white overflow-x-hidden ${className} lg:min-h-screen`}
     >
-      {/* Dark blue plate background */}
+      {/* Background image */}
       <div
         className="absolute left-0 top-0 w-full h-full"
         style={{ minHeight: "100vh" }}
       >
-        <div className="absolute flex inset-0 items-center justify-center">
-          <div className="flex-none h-full rotate-[180deg] scale-y-[-100%] w-full">
-            <div className="relative size-full">
-              <Image
-                src="/career-assets/rectangle-121.svg"
-                alt=""
-                fill
-                sizes="100vw"
-                className="block max-w-none size-full"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-        {/* Texture overlays */}
-        <div className="absolute contents inset-0">
-          <div className="absolute inset-[0_0_0_0.57%] mix-blend-overlay opacity-30">
-            <Image
-              src="/product-assets/metal-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute inset-0 mix-blend-lighten opacity-[0.19]">
-            <Image
-              src="/product-assets/grunge-overlay.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-            />
-          </div>
-          <div className="absolute flex inset-0 items-center justify-center mix-blend-soft-light">
-            <div className="flex-none h-full rotate-[180deg] scale-y-[-100%] w-full">
-              <div
-                className="opacity-30 size-full"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(rgba(128, 128, 128, 0.6) 0%, rgb(128, 128, 128) 19.684%, rgba(128, 128, 128, 0.3) 70.46%, rgb(128, 128, 128) 100%)",
-                }}
-              />
-            </div>
-          </div>
+        <div className="absolute inset-0">
+          <Image
+            src="/career-assets/career-bg.webp"
+            alt="Career background"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
 
       {/* Orange blur effects */}
-      <div className="absolute flex h-[462.018px] items-center justify-center right-0 top-[396.09px] w-[129.171px] hidden lg:block max-w-[100vw]">
+      {/* <div className="absolute flex h-[462.018px] items-center justify-center right-0 top-[396.09px] w-[129.171px] hidden lg:block max-w-[100vw]">
         <div className="flex-none rotate-[90deg]">
           <div className="bg-[#ff8b32] blur-[49.36px] filter h-[129.171px] opacity-30 rounded-[999px] w-[462.018px]" />
         </div>
@@ -79,7 +43,7 @@ export default function CareerBackground({
         <div className="flex-none rotate-[180deg]">
           <div className="bg-[#ff8b32] blur-[49.36px] filter h-[129.171px] opacity-30 rounded-[999px] w-[675.135px]" />
         </div>
-      </div>
+      </div> */}
 
       {/* Vertical separator lines */}
       <div className="absolute flex h-[2.018px] items-center justify-center left-0 top-[429.23px] w-full max-w-[100vw] hidden lg:block overflow-hidden">

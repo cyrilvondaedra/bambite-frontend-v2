@@ -1,7 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
 type WindowFrameProps = {
@@ -47,6 +52,7 @@ export default function WindowFrame({
 
   useEffect(() => {
     if (startTrigger) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShouldAnimate(true);
     }
   }, [startTrigger]);
@@ -108,22 +114,23 @@ export default function WindowFrame({
 
   // Use different styles based on device and animation state
   // On mobile during animation, don't apply scroll-based transforms
-  const dynamicStyle = isMobile && shouldAnimate
-    ? { 
-        width: "min(900px, 90vw)", 
-        height: "min(500px, 50vh)",
-      }
-    : !isMobile
-    ? { 
-        width: "min(900px, 90vw)", 
-        height: "min(500px, 50vh)", 
-        opacity, 
-        scale 
-      }
-    : { 
-        width: "min(900px, 90vw)", 
-        height: "min(500px, 50vh)",
-      };
+  const dynamicStyle =
+    isMobile && shouldAnimate
+      ? {
+          width: "min(900px, 90vw)",
+          height: "min(500px, 50vh)",
+        }
+      : !isMobile
+      ? {
+          width: "min(900px, 90vw)",
+          height: "min(500px, 50vh)",
+          opacity,
+          scale,
+        }
+      : {
+          width: "min(900px, 90vw)",
+          height: "min(500px, 50vh)",
+        };
 
   return (
     <motion.div
@@ -142,25 +149,8 @@ export default function WindowFrame({
         }
       }}
     >
-      {/* Outer Ring */}
-      <motion.div 
-        className="absolute inset-0"
-        variants={itemVariants}
-      >
-        <Image
-          src="/home-assets/window-frame-assets/outter-ring.svg"
-          alt=""
-          fill
-          className="object-contain"
-          priority
-        />
-      </motion.div>
-
       {/* Main Window Frame */}
-      <motion.div 
-        className="absolute inset-[5%]"
-        variants={itemVariants}
-      >
+      <motion.div className="absolute inset-[5%]" variants={itemVariants}>
         <Image
           src="/home-assets/window-frame-assets/window-frame.svg"
           alt=""
@@ -171,30 +161,16 @@ export default function WindowFrame({
       </motion.div>
 
       {/* Scene */}
-      <motion.div 
+      <motion.div
         className="absolute inset-[10%] overflow-hidden rounded-md"
         variants={sceneVariants}
       >
-        <Image 
-          src={sceneImage} 
-          alt="Scene" 
-          fill 
-          className="object-cover" 
-          priority
-        />
-      </motion.div>
-
-      {/* Glow */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none will-change-opacity"
-        variants={glowVariants}
-        animate="animate"
-      >
         <Image
-          src="/home-assets/window-frame-assets/glow-light.webp"
-          alt=""
+          src={sceneImage}
+          alt="Scene"
           fill
-          className="object-contain"
+          className="object-cover"
+          priority
         />
       </motion.div>
     </motion.div>

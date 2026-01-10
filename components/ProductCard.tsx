@@ -212,46 +212,6 @@ export default function ProductCard({
               border: "5px solid #193551",
             }}
           >
-            {/* Texture overlays */}
-            <div className="absolute contents inset-[-0.5px_calc(-0.08%-0.5px)_-0.5px_-0.5px]">
-              {/* Metal overlay */}
-              <div className="absolute inset-[0_-0.08%_0_0.57%] mix-blend-overlay opacity-30">
-                <Image
-                  src="/product-assets/metal-overlay.webp"
-                  alt=""
-                  fill
-                  sizes="336px"
-                  className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none"
-                />
-              </div>
-              {/* Grunge overlay */}
-              <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-lighten">
-                <div className="flex-none h-[58px] scale-y-[-100%] w-full">
-                  <div className="opacity-[0.34] relative size-full">
-                    <Image
-                      src="/product-assets/grunge-overlay.webp"
-                      alt=""
-                      fill
-                      sizes="336px"
-                      className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none"
-                    />
-                  </div>
-                </div>
-              </div>
-              {/* Gradient overlay */}
-              <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-soft-light">
-                <div className="flex-none h-[58px] rotate-[180deg] scale-y-[-100%] w-full">
-                  <div
-                    className="opacity-30 size-full"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(rgba(128, 128, 128, 0.6) 0%, rgb(128, 128, 128) 19.684%, rgba(128, 128, 128, 0.3) 70.46%, rgb(128, 128, 128) 100%)",
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-
             {/* Content area - Responsive padding and gap */}
             <div className="basis-0 content-stretch flex gap-1 sm:gap-3 md:gap-4 lg:gap-[24px] grow h-full items-center min-h-px min-w-px pl-1 sm:pl-2 md:pl-3 lg:pl-[12px] pr-2 sm:pr-3 md:pr-4 lg:pr-[20px] py-0 relative shrink-0 z-10">
               {/* Combined Add to cart button with icon */}

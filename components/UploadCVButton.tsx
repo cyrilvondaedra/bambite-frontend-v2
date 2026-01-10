@@ -27,50 +27,15 @@ export default function UploadCVButton({
   };
 
   return (
-    <div className={`flex items-center justify-center relative shrink-0 w-full ${className}`}>
+    <div
+      className={`flex items-center justify-center relative shrink-0 w-full ${className}`}
+    >
       <div className="flex-none rotate-[180deg] w-full">
         <button
           type="button"
           onClick={handleClick}
           className="bg-gradient-to-b border border-[#070f17] border-solid content-stretch flex from-[#171e24] h-[58px] items-center relative to-[#1b2229] w-full overflow-hidden"
         >
-          {/* Texture overlays */}
-          <div className="absolute contents inset-[-0.5px_calc(-0.08%-0.5px)_calc(0%-0.5px)_-0.5px]">
-            <div className="absolute inset-[0_-0.08%_0_0.57%] mix-blend-overlay opacity-30">
-              <Image
-                src="/product-assets/metal-overlay.webp"
-                alt=""
-                fill
-                sizes="600px"
-                className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-              />
-            </div>
-            <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-lighten">
-              <div className="flex-none h-[58px] scale-y-[-100%] w-full">
-                <div className="opacity-[0.34] relative size-full">
-                  <Image
-                    src="/product-assets/grunge-overlay.webp"
-                    alt=""
-                    fill
-                    sizes="600px"
-                    className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full"
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="absolute flex inset-[0_-0.08%_0_0] items-center justify-center mix-blend-soft-light">
-              <div className="flex-none h-[58px] rotate-[180deg] scale-y-[-100%] w-full">
-                <div
-                  className="opacity-30 size-full"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(rgba(128, 128, 128, 0.6) 0%, rgb(128, 128, 128) 19.684%, rgba(128, 128, 128, 0.3) 70.46%, rgb(128, 128, 128) 100%)",
-                  }}
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Button Content */}
           <div className="basis-0 content-stretch flex gap-[24px] grow h-[58px] items-center min-h-px min-w-px pl-[12px] pr-[20px] py-0 relative shrink-0 z-10">
             <div className="flex items-center justify-center relative shrink-0">
@@ -120,4 +85,3 @@ export default function UploadCVButton({
     </div>
   );
 }
-
