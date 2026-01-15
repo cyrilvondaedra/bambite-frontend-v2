@@ -25,7 +25,7 @@ export default function ContactInfoSection() {
       </div>
 
       {/* Phone */}
-      <div className="content-stretch flex flex-col gap-5 md:gap-4 lg:gap-5 items-start relative shrink-0 w-full">
+      {/* <div className="content-stretch flex flex-col gap-5 md:gap-4 lg:gap-5 items-start relative shrink-0 w-full">
         <p className="font-['Space_Mono',sans-serif] font-bold leading-none not-italic relative shrink-0 text-[13px] text-[#1e6cad] uppercase w-full">
           Phone
         </p>
@@ -37,7 +37,7 @@ export default function ContactInfoSection() {
             +65 987 654 341
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* Locations */}
       <div className="content-stretch flex flex-col gap-5 md:gap-4 lg:gap-5 items-start relative shrink-0 w-full">

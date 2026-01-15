@@ -80,9 +80,9 @@ export default function Footer() {
               <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] text-[14px]">
                 Address
               </p>
-              <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] text-[14px]">
+              {/* <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] text-[14px]">
                 +65 987 654 341
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -195,9 +195,9 @@ export default function Footer() {
                 <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] text-[14px] text-nowrap">
                   Address
                 </p>
-                <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] text-[14px] text-nowrap">
+                {/* <p className="font-['DM_Sans',sans-serif] font-normal leading-[1.2] text-[14px] text-nowrap">
                   +65 987 654 341
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
