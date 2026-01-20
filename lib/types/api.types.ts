@@ -50,10 +50,12 @@ export interface ApiProduct {
   thaiName?: string | null; // NEW - optional Thai name
   description: string;
   category: ApiCategory; // Object, not string
+  categoryId?: string; // Category ID (may be present in API response)
   ingredients?: string | null;
-  price: number;
+  price: number | string; // Can be string or number from API
   stockQuantity: number;
-  images: string[];
+  imageUrls: string[]; // FIXED: API returns imageUrls, not images
+  images?: string[]; // Keep for backward compatibility if needed
   productOptions?: ApiProductOption[]; // Many-to-many join table with nested options
   createdAt: string;
   updatedAt: string;

@@ -98,6 +98,12 @@ export default function ProductDetailsPage() {
         }
 
         // Map API product to ProductData
+        const imageArray = apiProduct.imageUrls || apiProduct.images || [];
+        const finalImages =
+          imageArray.length > 0
+            ? imageArray
+            : ["/product-images/product-1.webp"]; // Fallback image
+
         const mappedProduct: ProductData = {
           id: apiProduct.id,
           title: apiProduct.name,
@@ -106,10 +112,7 @@ export default function ProductDetailsPage() {
           currency: "THB",
           description: apiProduct.description || "",
           ingredients: apiProduct.ingredients || null,
-          images:
-            apiProduct.images && apiProduct.images.length > 0
-              ? apiProduct.images
-              : ["/product-images/product-1.webp"], // Fallback image
+          images: finalImages,
           options: mappedOptions,
           faqs: [
             {

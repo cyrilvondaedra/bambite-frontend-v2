@@ -8,13 +8,16 @@ import type { Product } from "@/components/MenuSection";
  * UPDATED: Category is now an object with id, name, status
  */
 export function mapApiProductToProduct(apiProduct: ApiProduct): Product {
+  const imageArray = apiProduct.imageUrls || apiProduct.images || [];
+  const mappedImage = imageArray[0] || "/product-images/product-1.webp";
+
   return {
     id: apiProduct.id,
     title: apiProduct.name,
     titleThai: apiProduct.thaiName || "", // NEW: Thai name support from API
-    price: apiProduct.price,
+    price: typeof apiProduct.price === 'string' ? parseFloat(apiProduct.price) : apiProduct.price,
     description: apiProduct.description || "",
-    image: apiProduct.images?.[0] || "/product-images/product-1.webp",
+    image: mappedImage,
     category: apiProduct.category.name as Product["category"], // Use category.name
   };
 }
